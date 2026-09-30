@@ -74,11 +74,16 @@ npm install
 ```
 
 ### Running the Application
-Start the development server:
+
+**Live Demo:**
+You can view the live application running here: [https://al-may-technical-assement.vercel.app/](https://al-may-technical-assement.vercel.app/)
+
+**Local Development:**
+Start the development server locally:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Running Tests
 Run the Vitest test suite:
