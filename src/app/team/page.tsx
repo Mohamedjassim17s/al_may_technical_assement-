@@ -154,22 +154,20 @@ export default function TeamPage() {
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${
-                        member.role === 'ADMIN' 
-                          ? 'bg-purple-100 text-purple-700' 
-                          : member.role === 'LAWYER' 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-slate-100 text-slate-700'
-                      }`}>
+                      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${member.role === 'ADMIN'
+                          ? 'bg-purple-100 text-purple-700'
+                          : member.role === 'LAWYER'
+                            ? 'bg-blue-100 text-blue-700'
+                            : 'bg-slate-100 text-slate-700'
+                        }`}>
                         {member.role}
                       </span>
                     </td>
                     <td className="py-4 px-6">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${
-                        member.status === 'Active' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' :
-                        member.status === 'Pending' ? 'bg-amber-50 text-amber-600 border-amber-200' :
-                        'bg-slate-50 text-slate-600 border-slate-200'
-                      }`}>
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${member.status === 'Active' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' :
+                          member.status === 'Pending' ? 'bg-amber-50 text-amber-600 border-amber-200' :
+                            'bg-slate-50 text-slate-600 border-slate-200'
+                        }`}>
                         {member.status}
                       </span>
                     </td>

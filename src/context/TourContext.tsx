@@ -20,8 +20,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
       steps: [
         {
           popover: {
-            title: 'Welcome to Geex Legal Management!',
-            description: 'Geex is a full-stack legal case management platform. It allows law firms to seamlessly track clients, manage complex case lifecycles, and monitor firm revenue analytics all in one intuitive dashboard.',
+            title: 'Welcome to Al Mahy Legal Management!',
+            description: 'Al Mahy is a full-stack legal case management platform. It allows law firms to seamlessly track clients, manage complex case lifecycles, and monitor firm revenue analytics all in one intuitive dashboard.',
             align: 'center'
           }
         },

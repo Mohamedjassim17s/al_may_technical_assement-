@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Settings, Bell, Lock, User, Palette, Globe, Save } from 'lucide-react';
+import { Settings, Lock, User, Palette, Globe, Save } from 'lucide-react';
 import { useToast } from '../../context/ToastContext';
 
 export default function SettingsPage() {
   const { showToast } = useToast();
-  const [activeTab, setActiveTab] = useState<'profile' | 'notifications' | 'security' | 'appearance'>('profile');
+  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'appearance'>('profile');
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ export default function SettingsPage() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-slate-800 tracking-tight">System Settings</h1>
-        <p className="text-sm text-slate-500 mt-1">Configure your personal preferences, notifications, and workspace settings.</p>
+        <p className="text-sm text-slate-500 mt-1">Configure your personal preferences and workspace settings.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -31,13 +31,7 @@ export default function SettingsPage() {
           >
             <User className="w-4 h-4 mr-3" /> Profile Info
           </button>
-          <button
-            onClick={() => setActiveTab('notifications')}
-            className={`w-full flex items-center px-4 py-3 rounded-xl text-sm font-semibold transition-all ${activeTab === 'notifications' ? 'bg-purple-50 text-purple-600' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
-              }`}
-          >
-            <Bell className="w-4 h-4 mr-3" /> Notifications
-          </button>
+
           <button
             onClick={() => setActiveTab('security')}
             className={`w-full flex items-center px-4 py-3 rounded-xl text-sm font-semibold transition-all ${activeTab === 'security' ? 'bg-purple-50 text-purple-600' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
@@ -81,7 +75,7 @@ export default function SettingsPage() {
                     <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Email Address</label>
                     <input
                       type="email"
-                      defaultValue="admin@geex-legal.com"
+                      defaultValue="admin@almahy.com"
                       className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-purple-500 focus:bg-white transition-all"
                     />
                   </div>
@@ -89,21 +83,7 @@ export default function SettingsPage() {
               </div>
             )}
 
-            {activeTab === 'notifications' && (
-              <div className="space-y-4">
-                <h3 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3">Notification Preferences</h3>
-                <div className="space-y-3">
-                  <label className="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" defaultChecked className="w-4 h-4 text-purple-600 rounded border-slate-300 focus:ring-purple-500" />
-                    <span className="text-sm font-medium text-slate-700">Email alerts for case updates</span>
-                  </label>
-                  <label className="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" defaultChecked className="w-4 h-4 text-purple-600 rounded border-slate-300 focus:ring-purple-500" />
-                    <span className="text-sm font-medium text-slate-700">Daily summaries of assigned client cases</span>
-                  </label>
-                </div>
-              </div>
-            )}
+
 
             {activeTab === 'security' && (
               <div className="space-y-4">
@@ -130,7 +110,7 @@ export default function SettingsPage() {
             {activeTab === 'appearance' && (
               <div className="space-y-4">
                 <h3 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3">Theme Settings</h3>
-                <p className="text-sm text-slate-600">Current Theme: <span className="font-bold text-purple-600">Geex Light Mode</span></p>
+                <p className="text-sm text-slate-600">Current Theme: <span className="font-bold text-purple-600">Al Mahy Light Mode</span></p>
               </div>
             )}
 

@@ -46,11 +46,26 @@ The application mimics a robust enterprise REST API.
 
 ## 🛠 Setup & Installation
 
-### Environment Variables
-1. Copy the example environment file:
-   ```bash
-   cp .env.example .env.local
-   ```
+### Environment Configuration
+
+The application requires specific environment variables to function correctly. Create a `.env.local` file in the root directory (or use your hosting provider's environment settings) and configure the following variables:
+
+```env
+# Application Environment (development, production, or test)
+NODE_ENV=development
+
+# The name of the application displayed in various parts of the UI
+NEXT_PUBLIC_APP_NAME="Apex Enterprise Management Portal"
+
+# The base URL for the application (e.g., http://localhost:3000 for local dev)
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+
+# Simulated network delay (in milliseconds) for API requests to test loading states
+NEXT_PUBLIC_API_SIMULATE_DELAY=200
+
+# Secret key used for mock authentication and session management
+NEXT_PUBLIC_AUTH_SECRET="dev-secret-key-12345"
+```
 
 ### Installation
 Install dependencies using npm:

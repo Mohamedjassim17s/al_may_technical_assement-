@@ -25,7 +25,7 @@ export function Sidebar() {
         <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center mr-3 shadow-lg shadow-purple-500/30">
           <Scale className="w-4 h-4 text-white" />
         </div>
-        <span className="font-bold text-xl text-slate-800 tracking-tight">Geex</span>
+        <span className="font-bold text-xl text-slate-800 tracking-tight">Al Mahy</span>
       </div>
 
       <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
